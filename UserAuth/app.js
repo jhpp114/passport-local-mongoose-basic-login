@@ -60,7 +60,7 @@ app.post('/register', function(req, res) {
         if (error) {
             console.log("Oops Error on reigstering user");
             console.log(error);
-            return res.render('/register');
+            return res.render('register');
         }
         passport.authenticate("local")(req, res, function(){
             res.redirect("/secret");
